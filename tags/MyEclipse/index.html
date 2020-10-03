@@ -953,7 +953,8 @@
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 <script type="text/javascript">
   function pjax_gitalk() {
     if(!document.querySelectorAll("#gitalk-container")[0])return;
@@ -978,8 +979,82 @@
     }
   }
 
+function newcomment() {
+ 
+    function queryLeanCloud(k) {
+      let root = this;
+      let len = arguments.length;
+      if (len == 1) {
+        let notExist = new AV.Query("Comment");
+        notExist.doesNotExist('rid');
+        let isEmpty = new AV.Query("Comment");
+        isEmpty.equalTo('rid', '');
+        let q = AV.Query.or(notExist, isEmpty);
+        if (k === '*') q.exists('url');
+        else q.equalTo('url', decodeURI(k));
+        q.addDescending('createdAt');
+        q.addDescending('insertedAt');
+        return q;
+      } else {
+        let ids = JSON.stringify(arguments[1]).replace(/(\[|\])/g, '');
+        let cql = `select * from ${root['config']['clazzName']} where rid in (${ids}) order by -createdAt,-createdAt`;
+        return AV.Query.doCloudQuery(cql)
+      }
+    }
+    var valine = new Valine({
+      el: '#valine_container_ba����Ϊ�����Ѿ���valine����Щ�����ˣ�����������У�',
+      app_id: '�����Լ���leancloud appid',
+      app_key: '�����Լ���',
+      placeholder: '',
+      serverURLs: '�����Լ���api'
+    });
+ 
+    //�жϲ�����heson��Ϊ�Լ����ǳ�
+    function bozhu(e){
+        if (e == "heson"){
+            nick = e + '[����]'
+            return nick;
+        } else {
+          return e
+        }
+    }
+ 
+   //�ж���ַ
+   function wangzhi(e){
+        http = e.slice(0,4)
+        https = e.slice(0,5)
+        if (http == "http" || https == "https" ){
+             return e
+        } else if (e == "" || e == null || e == undefined){
+          return e
+        } else {
+          e = 'http://'+ e
+          return e
+        }
+    }
+ 
+    //��ѯ����
+    valine.Q('*').limit(7).find().then(function (comments) {
+      var hotComments = $("#hot-comments");
+      for (var i = 0; i < comments.length; i++) {
+        if (i === 0) {
+          console.log(comments[0]);
+        }
+        var nick = bozhu(comments[i]._serverData.nick);
+        var content = comments[i]._serverData.comment;
+        var newcontent = content.substring(0, 50).replace(/<[^>]+>/g,"");
+        var url = comments[i]._serverData.url;
+        var link = wangzhi(comments[i]._serverData.link);
+        var updatedAt = timeago(comments[i].updatedAt);
+        var commentId = '#' + comments[i].id;
+        hotComments.append('<div class="card-comment-item"><div class="item-header-text"><a href="'+ link +'" target="_blank" rel="nofollow noopener noreferrer" class="newcomment" >' + nick + '</a>&nbsp;������' + updatedAt + '</div><div class="item-text"><a href="' + url + commentId +'"  rel="nofollow" style="color:#717171" class="comments-detail" >' + newcontent + '</a></div></div>');
+      }
+    });
+};
+
   $(function () {
     pjax_gitalk();
+    newcomment();
   });
 </script>
 
@@ -1467,6 +1542,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
         
         
           pjax_gitalk();
+	newcomment();
         
         
         
@@ -1488,8 +1564,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
   </div>
 </body>
 </html>
-��移除
-      $('script[data-pjax], .pjax-reload script').each(function () {
+$('script[data-pjax], .pjax-reload script').each(function () {
         $(this).parent().append($(this).remove());
       });
       try{
@@ -1528,6 +1603,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
         
         
           pjax_gitalk();
+	newcomment();
         
         
         
