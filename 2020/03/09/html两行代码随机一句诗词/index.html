@@ -1013,12 +1013,13 @@ function newcomment() {
         return AV.Query.doCloudQuery(cql)
       }
     }
-    var valine = new Valine({
-      el: '#valine_container_ba����Ϊ�����Ѿ���valine����Щ�����ˣ�����������У�',
-      app_id: '�����Լ���leancloud appid',
-      app_key: '�����Լ���',
-      placeholder: '',
-      serverURLs: '�����Լ���api'
+    var gitalk = new gitalk({
+       enable: true
+	   clientID: 5e960f031dd5cd5a5515
+	   clientSecret: 93d799d301b34f7f6852b25576fb2ddaa847f434
+	   repo: gitalk
+	   owner: yanx1n
+	   admin: [yanx1n] 
     });
  
     //�жϲ�����heson��Ϊ�Լ����ǳ�
@@ -1046,7 +1047,7 @@ function newcomment() {
     }
  
     //��ѯ����
-    valine.Q('*').limit(7).find().then(function (comments) {
+    gitalk.Q('*').limit(7).find().then(function (comments) {
       var hotComments = $("#hot-comments");
       for (var i = 0; i < comments.length; i++) {
         if (i === 0) {
