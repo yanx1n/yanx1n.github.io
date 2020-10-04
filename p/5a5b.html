@@ -17,9 +17,9 @@
 
   <!-- 页面元数据 -->
   
-  <title>JAVA使用QQ邮箱发送邮件 - Luckyx&#39;s Blog</title>
+  <title>MyEclipse因为破解不完整不能导出war包 - Luckyx&#39;s Blog</title>
   
-    <meta name="keywords" content="知识记录">
+    <meta name="keywords" content="MyEclipse">
   
 
   
@@ -414,7 +414,7 @@
  
 <div id="pjax-data" style="display: none"> 
   <div id="pjax-ispage">true</div> 
-  <div id="pjax-pageTitle">JAVA使用QQ邮箱发送邮件</div> 
+  <div id="pjax-pageTitle">MyEclipse因为破解不完整不能导出war包</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -454,7 +454,7 @@
     
     
       <h1 class="title">
-        JAVA使用QQ邮箱发送邮件
+        MyEclipse因为破解不完整不能导出war包
       </h1>
       <div class='new-meta-box'>
         
@@ -474,7 +474,7 @@
   <div class='new-meta-item category'>
     <a class='notlink'>
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/Java/">Java</a>
+      <a class="category-link" href="/categories/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/">疑难杂症</a>
     </a>
   </div>
 
@@ -496,7 +496,7 @@
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="JAVA使用QQ邮箱发送邮件" data-path="/2020/03/09/JAVA%E4%BD%BF%E7%94%A8QQ%E9%82%AE%E7%AE%B1%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6/">
+      <div id="lc-pv" data-title="MyEclipse因为破解不完整不能导出war包" data-path="/p/5a5b.html">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -513,15 +513,15 @@
 
 
   
-  <p>编写该程序需要用到的jar包：</p>
-<ol>
-<li>javax.mail-1.5.5.jar</li>
-<li>spring-beans-4.0.7.RELEASE.jar</li>
-<li>spring-context-support-4.0.7.RELEASE.jar</li>
-<li>spring-core-4.0.7.RELEASE.jar</li>
+  <p>myeclipse10.7的版本破解后，导出war包时报“SECURITY ALERT: INTEGERITY CHECK ERROR”的错误。</p>
+<h1 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h1><ol>
+<li><p>下载 <a target="_blank" rel="noopener" href="http://pan.baidu.com/s/1ge99H3X">http://pan.baidu.com/s/1ge99H3X</a></p>
+</li>
+<li><p>找到MyEclipse安装目录下MyEclipse\Common\plugins文件夹中，复制jar进去，然后将文件的后缀名改成TXT，改完之后启动myeclipse，启动之后什么都不用做，直接关闭；</p>
+</li>
+<li><p>找到这个jar文件，改回.jar的后缀名，重新启动软件。</p>
+</li>
 </ol>
-<h1 id="关键代码"><a href="#关键代码" class="headerlink" title="关键代码"></a>关键代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> mail;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.FileReader;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Properties;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.mail.SimpleMailMessage;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.mail.javamail.JavaMailSenderImpl;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 使用QQ发送邮件工具类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> canye</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SendEmailUtil</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> String SERVICE_HOST = <span class="string">&quot;smtp.qq.com&quot;</span>;       <span class="comment">/* QQ服务器 */</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> <span class="keyword">int</span> PORT = <span class="number">465</span>;                            <span class="comment">/* smtp的端口号 */</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> String PROTOCOL = <span class="string">&quot;smtp&quot;</span>;                  <span class="comment">/* 协议名称。smtp表示简单邮件传输协议 */</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> String ACCOUNT = <span class="string">&quot;xxxx@qq.com&quot;</span>;      <span class="comment">/* 发送邮件的QQ账号 */</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> String AUTH_CODE = <span class="string">&quot;xxxxxxxxxxx&quot;</span>;     <span class="comment">/* QQ授权码(需要到https://mail.qq.com/申请) */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> JavaMailSenderImpl senderImpl = <span class="keyword">new</span> JavaMailSenderImpl();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * *发送QQ邮件的初始化配置</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">static</span> &#123;</span><br><span class="line">		senderImpl.setHost( SERVICE_HOST );                                             <span class="comment">/* 设置 使用QQ邮箱发送邮件的主机名 */</span></span><br><span class="line"></span><br><span class="line">		senderImpl.setPort( PORT );                                                     <span class="comment">/* 设置端口号 */</span></span><br><span class="line"></span><br><span class="line">		senderImpl.setProtocol( PROTOCOL );                                             <span class="comment">/* 协议名称 */</span></span><br><span class="line"></span><br><span class="line">		senderImpl.setUsername( ACCOUNT );                                              <span class="comment">/* 设置自己的邮箱帐号名称 */</span></span><br><span class="line"></span><br><span class="line">		senderImpl.setPassword( AUTH_CODE );                                            <span class="comment">/* 设置对应账号申请到的授权码 */</span></span><br><span class="line"></span><br><span class="line">		Properties prop = <span class="keyword">new</span> Properties();</span><br><span class="line"></span><br><span class="line">		prop.put( <span class="string">&quot; mail.smtp.auth &quot;</span>, <span class="string">&quot;true&quot;</span> );                                         <span class="comment">/* 将这个参数设为true，让服务器进行认证,认证用户名和密码是否正确 */</span></span><br><span class="line"></span><br><span class="line">		prop.put( <span class="string">&quot;mail.smtp.starttls.enable&quot;</span>, <span class="string">&quot;true&quot;</span> );</span><br><span class="line"></span><br><span class="line">		prop.put( <span class="string">&quot;mail.smtp.socketFactory.class&quot;</span>, <span class="string">&quot;javax.net.ssl.SSLSocketFactory&quot;</span> );  <span class="comment">/* 使用ssl协议来保证连接安全 */</span></span><br><span class="line"></span><br><span class="line">		prop.put( <span class="string">&quot; mail.smtp.timeout &quot;</span>, <span class="string">&quot;25000&quot;</span> );                                     <span class="comment">/*传输超时时间 */</span></span><br><span class="line"></span><br><span class="line">		senderImpl.setJavaMailProperties( prop );</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 发送简单邮件</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> accounts  被发邮件的用户数组</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> info      邮件信息</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> title     邮件主题</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sendSimpleMail</span><span class="params">( String[] accounts, String info, String title )</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line"><span class="comment">/* 创建简单邮件对象 */</span></span><br><span class="line"></span><br><span class="line">		SimpleMailMessage mailMessage = <span class="keyword">new</span> SimpleMailMessage();</span><br><span class="line"></span><br><span class="line">		mailMessage.setTo( accounts );          <span class="comment">/* 设置邮件接收者账号数组 */</span></span><br><span class="line"></span><br><span class="line">		mailMessage.setFrom( ACCOUNT );         <span class="comment">/* 设置邮件的发送者 */</span></span><br><span class="line"></span><br><span class="line">		mailMessage.setSubject( title );        <span class="comment">/* 设置邮件的主题 */</span></span><br><span class="line"></span><br><span class="line">		mailMessage.setText( info );            <span class="comment">/* 设置邮件的内容 */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 发送邮件 */</span></span><br><span class="line"></span><br><span class="line">		senderImpl.send( mailMessage );</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>然后导入所需要的包就ok了</p>
 
   
   
@@ -534,7 +534,7 @@
           <blockquote>
             
               
-                <p>本文永久链接是：<a href=https://yanx1n.github.io'/2020/03/09/JAVA%E4%BD%BF%E7%94%A8QQ%E9%82%AE%E7%AE%B1%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6/>https://yanx1n.github.io'/2020/03/09/JAVA%E4%BD%BF%E7%94%A8QQ%E9%82%AE%E7%AE%B1%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6/</a></p>
+                <p>本文永久链接是：<a href=http://example.com/p/5a5b.html>http://example.com/p/5a5b.html</a></p>
               
             
           </blockquote>
@@ -551,7 +551,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-03T19:21:23+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-03T19:21:51+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2020年10月3日</p>
@@ -563,7 +563,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%9F%A5%E8%AF%86%E8%AE%B0%E5%BD%95/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>知识记录</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MyEclipse/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MyEclipse</p></a></div>
 
 
         
@@ -576,7 +576,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://yanx1n.github.io'/2020/03/09/JAVA%E4%BD%BF%E7%94%A8QQ%E9%82%AE%E7%AE%B1%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6/&title=JAVA使用QQ邮箱发送邮件 - Luckyx's Blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/p/5a5b.html&title=MyEclipse因为破解不完整不能导出war包 - Luckyx's Blog&summary="
           
           >
           
@@ -588,7 +588,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yanx1n.github.io'/2020/03/09/JAVA%E4%BD%BF%E7%94%A8QQ%E9%82%AE%E7%AE%B1%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6/&title=JAVA使用QQ邮箱发送邮件 - Luckyx's Blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/p/5a5b.html&title=MyEclipse因为破解不完整不能导出war包 - Luckyx's Blog&summary="
           
           >
           
@@ -600,7 +600,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://yanx1n.github.io'/2020/03/09/JAVA%E4%BD%BF%E7%94%A8QQ%E9%82%AE%E7%AE%B1%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6/&title=JAVA使用QQ邮箱发送邮件 - Luckyx's Blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/p/5a5b.html&title=MyEclipse因为破解不完整不能导出war包 - Luckyx's Blog&summary="
           
           >
           
@@ -630,18 +630,20 @@
   
     <div class="prev-next">
       
-        <a class='prev' href='/2020/03/09/html%E4%B8%A4%E8%A1%8C%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%9C%BA%E4%B8%80%E5%8F%A5%E8%AF%97%E8%AF%8D/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>html两行代码随机一句诗词</p>
-          <p class='content'>其他的具体查看js文件
-12&lt;span id=&quot;jinrishici-sentence&quot;&gt;正在加载今日诗词....&lt;/span&gt;&lt;script ...</p>
+        <a class='prev' href='/p/1810.html'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>JAVA使用QQ邮箱发送邮件</p>
+          <p class='content'>编写该程序需要用到的jar包：
+
+javax.mail-1.5.5.jar
+spring-beans-4.0.7.RELEASE.jar
+spring-context-support-4.0.7...</p>
         </a>
       
       
-        <a class='next' href='/2020/03/09/MyEclipse%E5%9B%A0%E4%B8%BA%E7%A0%B4%E8%A7%A3%E4%B8%8D%E5%AE%8C%E6%95%B4%E4%B8%8D%E8%83%BD%E5%AF%BC%E5%87%BAwar%E5%8C%85/'>
-          <p class='title'>MyEclipse因为破解不完整不能导出war包<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>myeclipse10.7的版本破解后，导出war包时报“SECURITY ALERT: INTEGERITY CHECK ERROR”的错误。
-解决办法：
-下载 http://pan.baid...</p>
+        <a class='next' href='/p/689b.html'>
+          <p class='title'>flutter沉浸式状态栏<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>在main方法内加入以下函数:
+1234567891011void main() &#123;  runApp(new MyApp());    // 判断当前设备是否为安卓  if (Plat...</p>
         </a>
       
     </div>
@@ -1252,7 +1254,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
       // 请求 PV 并自增
       var pvCtn = document.querySelector('#lc-sv');
       if (pvCtn || enableIncr) {
-        var pvGetter = this.getRecord(Counter, 'https://yanx1n.github.io'' + '/#lc-sv', 'Visits').then((record) => {
+        var pvGetter = this.getRecord(Counter, 'http://example.com' + '/#lc-sv', 'Visits').then((record) => {
           incrArr.push(this.buildIncrement(record.objectId))
           var eles = document.querySelectorAll('#lc-sv #number');
           if (eles.length > 0) {
@@ -1270,7 +1272,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
       // 请求 UV 并自增
       var uvCtn = document.querySelector('#lc-uv');
       if (uvCtn || enableIncr) {
-        var uvGetter = this.getRecord(Counter, 'https://yanx1n.github.io'' + '/#lc-uv', 'Visitors').then((record) => {
+        var uvGetter = this.getRecord(Counter, 'http://example.com' + '/#lc-uv', 'Visitors').then((record) => {
           var vuv = this.validUV();
           vuv && incrArr.push(this.buildIncrement(record.objectId))
           var eles = document.querySelectorAll('#lc-uv #number');
@@ -1292,7 +1294,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
         for (i = 0; i < allPV.length; i++) {
           let pv = allPV[i];
           let title = pv.getAttribute('data-title');
-          var url = 'https://yanx1n.github.io'' + pv.getAttribute('data-path');
+          var url = 'http://example.com' + pv.getAttribute('data-path');
           if (url) {
             var viewGetter = this.getRecord(Counter, url, title).then((record) => {
               // 是当前页面就自增

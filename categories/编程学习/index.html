@@ -471,7 +471,7 @@
   
     
     <h2 class="article-title" >
-      <a href="/2020/03/12/Flutter%E8%87%AA%E5%AE%9A%E4%B9%89Drawer%E7%9A%84%E5%9B%BE%E6%A0%87/">
+      <a href="/p/c3d7.html">
         Flutter自定义Drawer的图标
       </a>
     </h2>
@@ -493,7 +493,7 @@
       </div>
       
         <div>
-          <a class='readmore' href='/2020/03/12/Flutter%E8%87%AA%E5%AE%9A%E4%B9%89Drawer%E7%9A%84%E5%9B%BE%E6%A0%87/'>
+          <a class='readmore' href='/p/c3d7.html'>
             阅读全文
           </a>
         </div>
@@ -515,7 +515,7 @@
   
     
     <h2 class="article-title" >
-      <a href="/2020/03/09/html%E4%B8%A4%E8%A1%8C%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%9C%BA%E4%B8%80%E5%8F%A5%E8%AF%97%E8%AF%8D/">
+      <a href="/p/839a.html">
         html两行代码随机一句诗词
       </a>
     </h2>
@@ -540,7 +540,7 @@
       </div>
       
         <div>
-          <a class='readmore' href='/2020/03/09/html%E4%B8%A4%E8%A1%8C%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%9C%BA%E4%B8%80%E5%8F%A5%E8%AF%97%E8%AF%8D/'>
+          <a class='readmore' href='/p/839a.html'>
             阅读全文
           </a>
         </div>
@@ -562,7 +562,7 @@
   
     
     <h2 class="article-title" >
-      <a href="/2020/03/07/Flutter%20%E8%8E%B7%E5%8F%96%E5%B1%8F%E5%B9%95%E5%AE%BD%E9%AB%98/">
+      <a href="/p/9d6d.html">
         Flutter 获取屏幕宽高
       </a>
     </h2>
@@ -587,7 +587,7 @@
       </div>
       
         <div>
-          <a class='readmore' href='/2020/03/07/Flutter%20%E8%8E%B7%E5%8F%96%E5%B1%8F%E5%B9%95%E5%AE%BD%E9%AB%98/'>
+          <a class='readmore' href='/p/9d6d.html'>
             阅读全文
           </a>
         </div>
@@ -1321,7 +1321,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
       // 请求 PV 并自增
       var pvCtn = document.querySelector('#lc-sv');
       if (pvCtn || enableIncr) {
-        var pvGetter = this.getRecord(Counter, 'https://yanx1n.github.io'' + '/#lc-sv', 'Visits').then((record) => {
+        var pvGetter = this.getRecord(Counter, 'http://example.com' + '/#lc-sv', 'Visits').then((record) => {
           incrArr.push(this.buildIncrement(record.objectId))
           var eles = document.querySelectorAll('#lc-sv #number');
           if (eles.length > 0) {
@@ -1339,7 +1339,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
       // 请求 UV 并自增
       var uvCtn = document.querySelector('#lc-uv');
       if (uvCtn || enableIncr) {
-        var uvGetter = this.getRecord(Counter, 'https://yanx1n.github.io'' + '/#lc-uv', 'Visitors').then((record) => {
+        var uvGetter = this.getRecord(Counter, 'http://example.com' + '/#lc-uv', 'Visitors').then((record) => {
           var vuv = this.validUV();
           vuv && incrArr.push(this.buildIncrement(record.objectId))
           var eles = document.querySelectorAll('#lc-uv #number');
@@ -1361,7 +1361,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
         for (i = 0; i < allPV.length; i++) {
           let pv = allPV[i];
           let title = pv.getAttribute('data-title');
-          var url = 'https://yanx1n.github.io'' + pv.getAttribute('data-path');
+          var url = 'http://example.com' + pv.getAttribute('data-path');
           if (url) {
             var viewGetter = this.getRecord(Counter, url, title).then((record) => {
               // 是当前页面就自增

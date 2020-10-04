@@ -17,13 +17,11 @@
 
   <!-- 页面元数据 -->
   
-  <title>Flutter自定义Drawer的图标 - Luckyx&#39;s Blog</title>
+  <title>配置flutter的时候的问题 - Luckyx&#39;s Blog</title>
   
-    <meta name="keywords" content="flutter,知识记录">
+    <meta name="keywords" content="flutter,环境配置">
   
 
-  
-    <meta name="description" content="当我们创建一个Drawer后，在AppBar左侧会默认出现一个图标，点击它可以弹出drawer，但是有时候我们希望将这个图标换成我们想要的图标。如果我们单纯地直接改AppBar的leading属性，改了之后再点击新的Icon不会再弹出Drawer了。">
   
 
   <!-- feed -->
@@ -416,7 +414,7 @@
  
 <div id="pjax-data" style="display: none"> 
   <div id="pjax-ispage">true</div> 
-  <div id="pjax-pageTitle">Flutter自定义Drawer的图标</div> 
+  <div id="pjax-pageTitle">配置flutter的时候的问题</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -456,7 +454,7 @@
     
     
       <h1 class="title">
-        Flutter自定义Drawer的图标
+        配置flutter的时候的问题
       </h1>
       <div class='new-meta-box'>
         
@@ -476,7 +474,7 @@
   <div class='new-meta-item category'>
     <a class='notlink'>
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/">编程学习</a>
+      <a class="category-link" href="/categories/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/">疑难杂症</a>
     </a>
   </div>
 
@@ -487,7 +485,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年3月12日</p>
+    <p>发布于：2020年3月3日</p>
   </a>
 </div>
 
@@ -498,7 +496,7 @@
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="Flutter自定义Drawer的图标" data-path="/2020/03/12/Flutter%E8%87%AA%E5%AE%9A%E4%B9%89Drawer%E7%9A%84%E5%9B%BE%E6%A0%87/">
+      <div id="lc-pv" data-title="配置flutter的时候的问题" data-path="/p/9b60.html">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -515,12 +513,10 @@
 
 
   
-  <p>当我们创建一个Drawer后，在AppBar左侧会默认出现一个图标，点击它可以弹出drawer，但是有时候我们希望将这个图标换成我们想要的图标。如果我们单纯地直接改AppBar的leading属性，改了之后再点击新的Icon不会再弹出Drawer了。</p>
-<a id="more"></a>
-
-<p>正确的做法如下：</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">appBar: AppBar(</span><br><span class="line">	leading: Builder(builder: (BuildContext context) &#123;</span><br><span class="line">		<span class="keyword">return</span> IconButton(</span><br><span class="line">			icon: <span class="keyword">const</span> Icon(Icons.face),</span><br><span class="line">				onPressed: ()&#123;</span><br><span class="line">				 Scaffold.of(context).openDrawer();</span><br><span class="line">			&#125;,</span><br><span class="line">		);</span><br><span class="line">          &#125;),</span><br><span class="line">	title: Text(title),</span><br><span class="line">	drawer: xxx(),</span><br><span class="line">),</span><br></pre></td></tr></table></figure>
-<p>转载于：<a target="_blank" rel="noopener" href="https://blog.csdn.net/M_zoneL/article/details/86669521">https://blog.csdn.net/M_zoneL/article/details/86669521</a></p>
+  <p>懒得写了，直接贴上链接 :)</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/liy010/article/details/82078484">https://blog.csdn.net/liy010/article/details/82078484</a></p>
+</blockquote>
 
   
   
@@ -533,7 +529,7 @@
           <blockquote>
             
               
-                <p>本文永久链接是：<a href=https://yanx1n.github.io'/2020/03/12/Flutter%E8%87%AA%E5%AE%9A%E4%B9%89Drawer%E7%9A%84%E5%9B%BE%E6%A0%87/>https://yanx1n.github.io'/2020/03/12/Flutter%E8%87%AA%E5%AE%9A%E4%B9%89Drawer%E7%9A%84%E5%9B%BE%E6%A0%87/</a></p>
+                <p>本文永久链接是：<a href=http://example.com/p/9b60.html>http://example.com/p/9b60.html</a></p>
               
             
           </blockquote>
@@ -550,7 +546,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-03T19:19:41+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-03T19:22:18+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2020年10月3日</p>
@@ -562,7 +558,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/flutter/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>flutter</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%9F%A5%E8%AF%86%E8%AE%B0%E5%BD%95/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>知识记录</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/flutter/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>flutter</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>环境配置</p></a></div>
 
 
         
@@ -575,7 +571,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://yanx1n.github.io'/2020/03/12/Flutter%E8%87%AA%E5%AE%9A%E4%B9%89Drawer%E7%9A%84%E5%9B%BE%E6%A0%87/&title=Flutter自定义Drawer的图标 - Luckyx's Blog&summary=当我们创建一个Drawer后，在AppBar左侧会默认出现一个图标，点击它可以弹出drawer，但是有时候我们希望将这个图标换成我们想要的图标。如果我们单纯地直接改AppBar的leading属性，改了之后再点击新的Icon不会再弹出Drawer了。"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/p/9b60.html&title=配置flutter的时候的问题 - Luckyx's Blog&summary="
           
           >
           
@@ -587,7 +583,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yanx1n.github.io'/2020/03/12/Flutter%E8%87%AA%E5%AE%9A%E4%B9%89Drawer%E7%9A%84%E5%9B%BE%E6%A0%87/&title=Flutter自定义Drawer的图标 - Luckyx's Blog&summary=当我们创建一个Drawer后，在AppBar左侧会默认出现一个图标，点击它可以弹出drawer，但是有时候我们希望将这个图标换成我们想要的图标。如果我们单纯地直接改AppBar的leading属性，改了之后再点击新的Icon不会再弹出Drawer了。"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/p/9b60.html&title=配置flutter的时候的问题 - Luckyx's Blog&summary="
           
           >
           
@@ -599,7 +595,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://yanx1n.github.io'/2020/03/12/Flutter%E8%87%AA%E5%AE%9A%E4%B9%89Drawer%E7%9A%84%E5%9B%BE%E6%A0%87/&title=Flutter自定义Drawer的图标 - Luckyx's Blog&summary=当我们创建一个Drawer后，在AppBar左侧会默认出现一个图标，点击它可以弹出drawer，但是有时候我们希望将这个图标换成我们想要的图标。如果我们单纯地直接改AppBar的leading属性，改了之后再点击新的Icon不会再弹出Drawer了。"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/p/9b60.html&title=配置flutter的时候的问题 - Luckyx's Blog&summary="
           
           >
           
@@ -629,11 +625,20 @@
   
     <div class="prev-next">
       
+        <a class='prev' href='/p/b251.html'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Flutter Your app isn't using AndroidX</p>
+          <p class='content'>在gradle.properties中添加如下代码即可
+
+
+12android.enableJetifier&#x3D;trueandroid.useAndroidX&#x3D;true</p>
+        </a>
       
-        <a class='next' href='/2020/03/09/html%E4%B8%A4%E8%A1%8C%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%9C%BA%E4%B8%80%E5%8F%A5%E8%AF%97%E8%AF%8D/'>
-          <p class='title'>html两行代码随机一句诗词<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>其他的具体查看js文件
-12&lt;span id=&quot;jinrishici-sentence&quot;&gt;正在加载今日诗词....&lt;/span&gt;&lt;script ...</p>
+      
+        <a class='next' href='/p/8335.html'>
+          <p class='title'>Myeclipse2010以上版本Mapper.xml报Referenced file contains errors<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>mybatis的mapper.xml报
+
+Referenced file contains errors (http://mybatis.org/dtd/mybatis-3-mapper.dtd...</p>
         </a>
       
     </div>
@@ -1230,7 +1235,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
       // 请求 PV 并自增
       var pvCtn = document.querySelector('#lc-sv');
       if (pvCtn || enableIncr) {
-        var pvGetter = this.getRecord(Counter, 'https://yanx1n.github.io'' + '/#lc-sv', 'Visits').then((record) => {
+        var pvGetter = this.getRecord(Counter, 'http://example.com' + '/#lc-sv', 'Visits').then((record) => {
           incrArr.push(this.buildIncrement(record.objectId))
           var eles = document.querySelectorAll('#lc-sv #number');
           if (eles.length > 0) {
@@ -1248,7 +1253,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
       // 请求 UV 并自增
       var uvCtn = document.querySelector('#lc-uv');
       if (uvCtn || enableIncr) {
-        var uvGetter = this.getRecord(Counter, 'https://yanx1n.github.io'' + '/#lc-uv', 'Visitors').then((record) => {
+        var uvGetter = this.getRecord(Counter, 'http://example.com' + '/#lc-uv', 'Visitors').then((record) => {
           var vuv = this.validUV();
           vuv && incrArr.push(this.buildIncrement(record.objectId))
           var eles = document.querySelectorAll('#lc-uv #number');
@@ -1270,7 +1275,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
         for (i = 0; i < allPV.length; i++) {
           let pv = allPV[i];
           let title = pv.getAttribute('data-title');
-          var url = 'https://yanx1n.github.io'' + pv.getAttribute('data-path');
+          var url = 'http://example.com' + pv.getAttribute('data-path');
           if (url) {
             var viewGetter = this.getRecord(Counter, url, title).then((record) => {
               // 是当前页面就自增
