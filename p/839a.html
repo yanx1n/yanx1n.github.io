@@ -813,8 +813,8 @@ spring-context-support-4.0.7...</p>
           }
           shuffle(imgs);
         }
-        if ('') {
-          $('').backstretch(
+        if ('.cover-backstretch') {
+          $('.cover-backstretch').backstretch(
             imgs,
           {
             duration: "10000",
@@ -1042,6 +1042,23 @@ var options = {
 // 卡片兼容处理 mix-blend-mode 与 effect: [blur] 冲突
 
 function pjax_darkmodejs(){
+  
+  if(!supportCss3('mix-blend-mode'))return;
+  var checkExist2 = setInterval(function() {
+     if (typeof jQuery == 'undefined'){return;}
+     clearInterval(checkExist2);
+     var TopFlag=getClientHeight();
+    $(window).scroll(function(){
+      var top = $(document).scrollTop();
+      if(top > TopFlag) {
+        $(".darkmode-layer").css("mix-blend-mode","normal");
+        $(".darkmode-layer").css("background-color","#222");
+      }else{
+        $(".darkmode-layer").css("mix-blend-mode","difference");
+        $(".darkmode-layer").css("background-color","");
+      }
+    })
+  }, 100);
   
 }
 // mix-blend-mode support?
@@ -1432,8 +1449,8 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
           }
         
           
-          if ('') {
-            $('').backstretch("resize");
+          if ('.cover-backstretch') {
+            $('.cover-backstretch').backstretch("resize");
             if($('.cover-wrapper').is(':hidden')){
               $('.cover-backstretch').backstretch("pause");
             }else{
