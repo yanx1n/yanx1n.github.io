@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Github Hexo 404</title>
+      <link href="p/682b.html"/>
+      <url>p/682b.html</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://pic4.zhimg.com/80/v2-d0451d70eb7d2d3be21d2cc8bea70427_720w.jpg" class="lazyload" data-srcset="https://pic4.zhimg.com/80/v2-d0451d70eb7d2d3be21d2cc8bea70427_720w.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p><p>绑定了自己的域名，但是并没有在Github中设置，或许说绑定了的，但是每次Hexo d后Github page的自定义域名都会重置消失，解决方案是</p><p>Github默认把域名写在了一个CNAME的无后缀名文件中，在 <code>/source</code> 中创建一个叫CNAME的无后缀名文件，在里面写你要解析的域名即可，不需要带协议头。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 疑难杂症 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>gitalk经常报错network error</title>
       <link href="p/b254.html"/>
       <url>p/b254.html</url>
