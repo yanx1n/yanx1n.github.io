@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Plugin caching_sha2_password could not be loaded</title>
+      <link href="p/5c5b.html"/>
+      <url>p/5c5b.html</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://images2018.cnblogs.com/blog/1192534/201808/1192534-20180804225657811-1627061237.png" class="lazyload" data-srcset="https://images2018.cnblogs.com/blog/1192534/201808/1192534-20180804225657811-1627061237.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt=""></p><h1>原因</h1><p>通过本地去连接远程的mysql时报错，原因是mysql8.0的加密方法变了。</p><p>第三方客户端基本都不支持这种加密方式，只有自带的命令行支持，所以需要修改加密方式。</p><h1>解决方法</h1><ol><li><p>修改加密方式</p><blockquote><p>ALTER USER’root’@‘localhost’ IDENTIFIED BY ‘密码@’ PASSWORD EXPIRE NEVER;</p></blockquote></li><li><p>重新修改密码</p><blockquote><p>ALTER USER’root’@‘localhost’ IDENTIFIED BY ‘密码@’ PASSWORD EXPIRE NEVER;</p></blockquote></li><li><p>刷新</p><blockquote><p>FLUSH PRIVILEGES;</p></blockquote></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 疑难杂症 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mysql </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MyEclipse因为破解不完整不能导出war包</title>
       <link href="p/5a5b.html"/>
       <url>p/5a5b.html</url>
@@ -150,31 +175,6 @@
         <tags>
             
             <tag> 知识记录 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Plugin caching_sha2_password could not be loaded</title>
-      <link href="p/5c5b.html"/>
-      <url>p/5c5b.html</url>
-      
-        <content type="html"><![CDATA[<p><img src="https://images2018.cnblogs.com/blog/1192534/201808/1192534-20180804225657811-1627061237.png" class="lazyload" data-srcset="https://images2018.cnblogs.com/blog/1192534/201808/1192534-20180804225657811-1627061237.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt=""></p><h1>原因</h1><p>通过本地去连接远程的mysql时报错，原因是mysql8.0的加密方法变了。</p><p>第三方客户端基本都不支持这种加密方式，只有自带的命令行支持，所以需要修改加密方式。</p><h1>解决方法</h1><ol><li><p>修改加密方式</p><blockquote><p>ALTER USER’root’@‘localhost’ IDENTIFIED BY ‘密码@’ PASSWORD EXPIRE NEVER;</p></blockquote></li><li><p>重新修改密码</p><blockquote><p>ALTER USER’root’@‘localhost’ IDENTIFIED BY ‘密码@’ PASSWORD EXPIRE NEVER;</p></blockquote></li><li><p>刷新</p><blockquote><p>FLUSH PRIVILEGES;</p></blockquote></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> 疑难杂症 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> mysql </tag>
             
         </tags>
       
