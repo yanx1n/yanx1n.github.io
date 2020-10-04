@@ -5,6 +5,8 @@
   <!-- SEO相关 -->
   
     
+      <meta name="robots" content="noindex,follow">
+    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -17,7 +19,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>Luckyx&#39;s Blog</title>
+  <title>标签：mysql - Luckyx&#39;s Blog</title>
   
 
   
@@ -333,7 +335,7 @@
   
     
     
-        <div class='cover-wrapper list dock' style="display: none;">
+        <div class='cover-wrapper  dock' style="display: none;">
           
             <div class='cover-backstretch'></div>
           
@@ -444,56 +446,87 @@
 
 <div class='l_main'>
   
-    <section class="post-list">
+    
+      
+  <section class="post-list">
+    
       
         
-      
+          
         
       
-        
+    
+    
       
         
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/p/5c5b.html">
+        Plugin caching_sha2_password could not be loaded
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
       
         
+原因
+通过本地去连接远程的mysql时报错，原因是mysql8.0的加密方法变了。
+第三方客户端基本都不支持这种加密方式，只有自带的命令行支持，所以需要修改加密方式。
+解决方法
+
+
+修改加密方式
+
+ALTER USER’root’@‘localhost’ IDENTIFIED BY ‘密码@’ PASSWORD EXPIRE NEVER;
+
+
+
+重新修改密码
+
+ALTER USER’roo...
       
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-03-09</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/">疑难杂症</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/p/5c5b.html'>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
         
       
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </section>
+    
+  </section>
+  
+    
+  
+
+
+    
   
 </div>
 <aside class='l_side'>
