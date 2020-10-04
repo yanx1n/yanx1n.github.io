@@ -2645,8 +2645,11 @@ div.fancybox .image-caption:empty {
   --color-meta: #888;
   --color-link: #888;
 }
-.darkmode--activated .l_body {
-  background-color: var(--color-site-bg) !important;
+.darkmode--activated .backstretch {
+  background-color: #282c34 !important;
+}
+.darkmode--activated .backstretch-item {
+  display: none !important;
 }
 .darkmode--activated img {
   filter: brightness(70%) !important;
