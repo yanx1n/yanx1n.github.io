@@ -922,6 +922,11 @@ title: 用 Hexo 和 GitHub Pages 搭建博客
         $(".highlight .code pre").before(copyHtml);
         $(".article pre code").before(copyHtml);
         clipboard.off('success').on('success', function (e) {
+            $.message({
+            title: '���Ƴɹ�',
+            message: "�����Ѹ��ƣ������������ȨЭ�顣",
+            type: 'success'
+        });
             let $btn = $(e.trigger);
             $btn.addClass('copied');
             let $icon = $($btn.find('i'));
@@ -955,7 +960,6 @@ title: 用 Hexo 和 GitHub Pages 搭建博客
         pjax_initCopyCode()
     });
 </script>
-
 
 
 

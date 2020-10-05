@@ -914,6 +914,11 @@ spring-context-support-4.0.7...</p>
         $(".highlight .code pre").before(copyHtml);
         $(".article pre code").before(copyHtml);
         clipboard.off('success').on('success', function (e) {
+            $.message({
+            title: '���Ƴɹ�',
+            message: "�����Ѹ��ƣ������������ȨЭ�顣",
+            type: 'success'
+        });
             let $btn = $(e.trigger);
             $btn.addClass('copied');
             let $icon = $($btn.find('i'));
@@ -947,7 +952,6 @@ spring-context-support-4.0.7...</p>
         pjax_initCopyCode()
     });
 </script>
-
 
 
 
