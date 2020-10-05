@@ -61,6 +61,12 @@
   
 
   
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.18.1/styles/solarized-light.css">
+
+    
+  
   
     
 <link rel="stylesheet" href="/css/style.css">
@@ -516,7 +522,18 @@
 
   
   <p>在main方法内加入以下函数:</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> main() &#123;</span><br><span class="line">  runApp(<span class="keyword">new</span> MyApp());</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 判断当前设备是否为安卓</span></span><br><span class="line">  <span class="keyword">if</span> (Platform.isAndroid) &#123;</span><br><span class="line">  	<span class="comment">// 关键代码</span></span><br><span class="line">	SystemUiOverlayStyle systemUiOverlayStyle =</span><br><span class="line">        SystemUiOverlayStyle(statusBarColor: Colors.transparent);</span><br><span class="line">	SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="language-dart">void main() &#123;
+  runApp(new MyApp());
+  
+  // 判断当前设备是否为安卓
+  if (Platform.isAndroid) &#123;
+  	// 关键代码
+	SystemUiOverlayStyle systemUiOverlayStyle =
+        SystemUiOverlayStyle(statusBarColor: Colors.transparent);
+	SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
+  &#125;
+&#125;
+</code></pre>
 <p>然后导入所需要的包就ok了</p>
 
   
@@ -1129,6 +1146,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
+
 
 
   <script defer>
@@ -1458,6 +1482,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             }
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

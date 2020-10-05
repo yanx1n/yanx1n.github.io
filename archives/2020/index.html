@@ -61,6 +61,12 @@
   
 
   
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.18.1/styles/solarized-light.css">
+
+    
+  
   
     
 <link rel="stylesheet" href="/css/style.css">
@@ -751,7 +757,8 @@ permalink: :year/:month/:day/:title/
     
       
         其他的具体查看js文件
-12&lt;span id=&quot;jinrishici-sentence&quot;&gt;正在加载今日诗词....&lt;/span&gt;&lt;script src=&quot;https://sdk.jinrishici.com/v2/browser/jinrishici.js&quot; charset=&quot;utf-8&quot;&gt;&lt...
+&lt;span id=&quot;jinrishici-sentence&quot;&gt;正在加载今日诗词....&lt;/span&gt;
+&lt;script src=&quot;https://sdk.jinrishici.com/v2/browser/jinrishici.js&quot; charset=&quot;utf-8&quot;&gt;&lt;...
       
     
   </div>
@@ -805,7 +812,12 @@ spring-context-support-4.0.7.RELEASE.jar
 spring-core-4.0.7.RELEASE.jar
 
 关键代码
-123456789101112131415161718192021222324252627282930...
+package mail;
+
+
+import java.io.BufferedReader;
+
+imp...
       
     
   </div>
@@ -852,7 +864,14 @@ spring-core-4.0.7.RELEASE.jar
     
       
         在main方法内加入以下函数:
-1234567891011void main() &#123;  runApp(new MyApp());    // 判断当前设备是否为安卓  if (Platform.isAndroid) &#123;  	// 关键代码	SystemUiOverlayStyle systemUiOverlayStyle =        SystemUiOverlayS...
+void main() &#123;
+  runApp(new MyApp());
+  
+  // 判断当前设备是否为安卓
+  if (Platform.isAndroid) &#123;
+  	// 关键代码
+	SystemUiOverlayStyle systemUiOverlayStyle =
+        SystemUiOverlayStyle(s...
       
     
   </div>
@@ -1583,6 +1602,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
+
 
 
   <script defer>
@@ -1912,6 +1938,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             }
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

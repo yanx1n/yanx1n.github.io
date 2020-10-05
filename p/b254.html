@@ -61,6 +61,12 @@
   
 
   
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.18.1/styles/solarized-light.css">
+
+    
+  
   
     
 <link rel="stylesheet" href="/css/style.css">
@@ -525,7 +531,13 @@
 <p>npm i hexo-abbrlink --save-dev</p>
 </blockquote>
 <p>修改_config.yml里的abbrlink为</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># abbrlink config</span><br><span class="line">abbrlink:</span><br><span class="line">  alg: crc16  #support crc16(default) and crc32</span><br><span class="line">  rep: hex    #support dec(default) and hex</span><br><span class="line"># 更改 permalink 值</span><br><span class="line">permalink: p/:abbrlink.html </span><br></pre></td></tr></table></figure>
+<pre><code class="language-xml"># abbrlink config
+abbrlink:
+  alg: crc16  #support crc16(default) and crc32
+  rep: hex    #support dec(default) and hex
+# 更改 permalink 值
+permalink: p/:abbrlink.html 
+</code></pre>
 <p>重新运行静态构建</p>
 <blockquote>
 <p>hexo g</p>
@@ -1138,6 +1150,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
+
 
 
   <script defer>
@@ -1467,6 +1486,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             }
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

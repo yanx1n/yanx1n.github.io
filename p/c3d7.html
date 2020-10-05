@@ -19,7 +19,7 @@
   
   <title>Flutter自定义Drawer的图标 - Luckyx&#39;s Blog</title>
   
-    <meta name="keywords" content="flutter,知识记录">
+    <meta name="keywords" content="知识记录,flutter">
   
 
   
@@ -62,6 +62,12 @@
   <!-- import link -->
   
 
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.18.1/styles/solarized-light.css">
+
+    
   
   
     
@@ -520,7 +526,19 @@
   <p>当我们创建一个Drawer后，在AppBar左侧会默认出现一个图标，点击它可以弹出drawer，但是有时候我们希望将这个图标换成我们想要的图标。如果我们单纯地直接改AppBar的leading属性，改了之后再点击新的Icon不会再弹出Drawer了。</p>
 <a id="more"></a>
 <p>正确的做法如下：</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">appBar: AppBar(</span><br><span class="line">	leading: Builder(builder: (BuildContext context) &#123;</span><br><span class="line">		<span class="keyword">return</span> IconButton(</span><br><span class="line">			icon: <span class="keyword">const</span> Icon(Icons.face),</span><br><span class="line">				onPressed: ()&#123;</span><br><span class="line">				 Scaffold.of(context).openDrawer();</span><br><span class="line">			&#125;,</span><br><span class="line">		);</span><br><span class="line">          &#125;),</span><br><span class="line">	title: Text(title),</span><br><span class="line">	drawer: xxx(),</span><br><span class="line">),</span><br></pre></td></tr></table></figure>
+<pre><code class="language-Dart">appBar: AppBar(
+	leading: Builder(builder: (BuildContext context) &#123;
+		return IconButton(
+			icon: const Icon(Icons.face),
+				onPressed: ()&#123;
+				 Scaffold.of(context).openDrawer();
+			&#125;,
+		);
+          &#125;),
+	title: Text(title),
+	drawer: xxx(),
+),
+</code></pre>
 <p>转载于：<a target="_blank" rel="noopener" href="https://blog.csdn.net/M_zoneL/article/details/86669521">https://blog.csdn.net/M_zoneL/article/details/86669521</a></p>
 
   
@@ -563,7 +581,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/flutter/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>flutter</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%9F%A5%E8%AF%86%E8%AE%B0%E5%BD%95/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>知识记录</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%9F%A5%E8%AF%86%E8%AE%B0%E5%BD%95/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>知识记录</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/flutter/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>flutter</p></a></div>
 
 
         
@@ -651,7 +669,8 @@ permalink: :year/:month/:day/:title/
         <a class='next' href='/p/839a.html'>
           <p class='title'>html两行代码随机一句诗词<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>其他的具体查看js文件
-12&lt;span id=&quot;jinrishici-sentence&quot;&gt;正在加载今日诗词....&lt;/span&gt;&lt;script ...</p>
+&lt;span id=&quot;jinrishici-sentence&quot;&gt;正在加载今日诗词....&lt;/span&gt;
+&lt;script s...</p>
         </a>
       
     </div>
@@ -1128,6 +1147,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
+
 
 
   <script defer>
@@ -1457,6 +1483,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             }
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();

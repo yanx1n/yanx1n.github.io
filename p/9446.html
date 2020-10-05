@@ -65,6 +65,12 @@
   
 
   
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.18.1/styles/solarized-light.css">
+
+    
+  
   
     
 <link rel="stylesheet" href="/css/style.css">
@@ -678,9 +684,12 @@ title: 用 Hexo 和 GitHub Pages 搭建博客
       
         <a class='next' href='/p/7178.html'>
           <p class='title'>通过ADB解锁System分区<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>1adb root
-1adb disable-verity
-1adb reboot
+          <p class='content'>adb root
+
+adb disable-verity
+
+adb reboot
+
 </p>
         </a>
       
@@ -1158,6 +1167,13 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
+
 
 
   <script defer>
@@ -1487,6 +1503,10 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             }
           }
         
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
         
         
           pjax_scrollrebeal();
