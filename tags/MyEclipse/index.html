@@ -19,7 +19,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>标签：Myeclipse - Luckyx&#39;s Blog</title>
+  <title>标签：MyEclipse - Luckyx&#39;s Blog</title>
   
 
   
@@ -352,6 +352,13 @@
       <div class='list-h'>
         
           
+            <a href="/archives/"
+              
+              
+              id="archives">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg'><p>文章</p>
+            </a>
+          
             <a href="/v4/getting-started/"
               
               
@@ -378,13 +385,6 @@
               
               id="contributors">
               <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f389.svg'><p>社区</p>
-            </a>
-          
-            <a href="/archives/"
-              
-              
-              id="archives">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg'><p>博客</p>
             </a>
           
             <a target="_blank" rel="noopener" href="https://cloud.lanzou.cc"
@@ -456,8 +456,6 @@
         
           
         
-          
-        
       
     
     
@@ -471,69 +469,22 @@
   
     
     <h2 class="article-title" >
-      <a href="/p/8335.html">
-        Myeclipse2010以上版本Mapper.xml报Referenced file contains errors
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>mybatis的mapper.xml报</p>
-<blockquote>
-<p>Referenced file contains errors (<a target="_blank" rel="noopener" href="http://mybatis.org/dtd/mybatis-3-mapper.dtd">http://mybatis.org/dtd/mybatis-3-mapper.dtd</a>). For more information, right click on the message in the Problems View and select “Show Details…”</p>
-</blockquote>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-02-07</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/">疑难杂症</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/p/8335.html'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/p/1da6.html">
-        MyEclipse中消除导入xx.min.js后报错的红叉
+      <a href="/p/5a5b.html">
+        MyEclipse因为破解不完整不能导出war包
       </a>
     </h2>
   
   <div class='md'>
     
       
-        有时候导入一些js文件后整个项目到处都是红叉，看起来挺烦人的，所以…
+        myeclipse10.7的版本破解后，导出war包时报“SECURITY ALERT: INTEGERITY CHECK ERROR”的错误。
+解决办法：
 
-右键报错的文件 —&gt; MyEclipse —&gt; Exclude From Validation
 
-顾名思义，就是排除验证的意思
+下载 http://pan.baidu.com/s/1ge99H3X
 
-然后就好了
 
+找到MyEclipse安装目录下MyEclipse\Common\plugins文件夹中，复制jar进去，然后将文件的后缀名改成TXT，改完之后启动myecl...
       
     
   </div>
@@ -541,7 +492,7 @@
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time>2020-02-07</time>
+        <time>2020-10-04</time>
         
           <span class="dot"></span>
           <a class="category-link" href="/categories/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/">疑难杂症</a>
@@ -549,7 +500,7 @@
       </div>
       
         <div>
-          <a class='readmore' href='/p/1da6.html'>
+          <a class='readmore' href='/p/5a5b.html'>
             阅读全文
           </a>
         </div>
@@ -739,17 +690,11 @@
         <br>
         <div class="social-wrapper">
           
-            
-          
-            
-          
-            
-          
         </div>
       
     
       
-        <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+        <div><p>footer.license</p>
 </div>
       
     
@@ -768,7 +713,7 @@
     
       
         <div class='copyright'>
-        <p><a href="/">Copyright © 2020 luckyx</a></p>
+        <p>Copyright © 2020 Luckyx</p>
 
         </div>
       
@@ -1476,6 +1421,61 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             SCload_fancybox();
           } else {
             pjax_fancybox();
+          }
+        
+          
+          if ('') {
+            $('').backstretch("resize");
+            if($('.cover-wrapper').is(':hidden')){
+              $('.cover-backstretch').backstretch("pause");
+            }else{
+              $('.cover-backstretch').backstretch("next");
+            }
+          } else {
+            $.backstretch("resize");
+            if($('.cover-wrapper').is(':hidden')){
+              $.backstretch("pause");
+            }else{
+              $.backstretch("next");
+            }
+          }
+        
+        
+        
+          pjax_scrollrebeal();
+        
+        
+        
+          pjax_initCopyCode();
+        
+        
+        
+        
+             pjax_gitalk();
+	newcomment();
+        
+        
+        
+          pjax_darkmodejs();
+        
+      } catch (e) {
+        console.log(e);
+      }
+      window.HideLoading();
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+      window.HideLoading();
+      window.location.href = e.triggerElement.href;
+    });
+
+</script>
+
+    
+  </div>
+</body>
+</html>
+fancybox();
           }
         
           
