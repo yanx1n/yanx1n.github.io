@@ -461,7 +461,7 @@ $.extend({message:function(e){var n={title:"",message:" 操作成功",time:"3000
 	var canvas, ctx, width, height, bubbles, animateHeader = true;
 	initHeader();
 	function initHeader() {
-		canvas = document.getElementById('header_canvas');
+		canvas = document.getElementByClassName('l_body');
 		window_resize();
 		ctx = canvas.getContext('2d');
 		//建立泡泡
