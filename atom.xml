@@ -137,9 +137,9 @@
     <category term="编程学习" scheme="http://example.com/categories/%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="flutter" scheme="http://example.com/tags/flutter/"/>
-    
     <category term="知识记录" scheme="http://example.com/tags/%E7%9F%A5%E8%AF%86%E8%AE%B0%E5%BD%95/"/>
+    
+    <category term="flutter" scheme="http://example.com/tags/flutter/"/>
     
   </entry>
   
@@ -270,9 +270,9 @@ Failed to connect to &lt;a href=&quot;http://github.com&quot;&gt;github.com&lt;/
     <category term="编程学习" scheme="http://example.com/categories/%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="flutter" scheme="http://example.com/tags/flutter/"/>
-    
     <category term="知识记录" scheme="http://example.com/tags/%E7%9F%A5%E8%AF%86%E8%AE%B0%E5%BD%95/"/>
+    
+    <category term="flutter" scheme="http://example.com/tags/flutter/"/>
     
   </entry>
   
